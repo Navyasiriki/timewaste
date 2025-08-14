@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Open/Close Door</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 50px;
+        }
+        .door {
+            width: 200px;
+            height: 300px;
+            margin: 20px auto;
+            background-color: #8B4513;
+            border: 4px solid #654321;
+            border-radius: 5px;
+            position: relative;
+            transition: transform 1s ease;
+        }
+        .door.open {
+            transform: rotateY(120deg);
+            transform-origin: left center;
+            background-color: #a0522d;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Door Simulation</h1>
+    <div id="door" class="door"></div>
+    <button onclick="toggleDoor()">Open/Close Door</button>
+
+    <script>
+        function toggleDoor() {
+            const door = document.getElementById("door");
+            door.classList.toggle("open");
+        }
+    </script>
+
+</body>
+</html>
